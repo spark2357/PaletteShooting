@@ -8,6 +8,7 @@ public class enemy : MonoBehaviour
 {
     public float velocity = 5f;
     public int hp = 1;
+    public SpriteRenderer enemySR;
     Rigidbody2D rigid;
 
     private void Awake()
@@ -23,7 +24,7 @@ public class enemy : MonoBehaviour
     private void SetRandomColor()
     {
         enemySR = enemy.GetComponent<SpriteRenderer>();
-        int randomIndex = randomIndex.Range(1, 7);
+        int randomIndex = Random.Range(1, 7);
         switch (randomIndex)
         {
             case 1:
@@ -47,13 +48,6 @@ public class enemy : MonoBehaviour
             case 7:
                 enemySR.color = new Color32(255, 255, 0, 255);
                 break;
-        }
-    }
-    private void OnHit()
-    {
-        if (bulletSR.color == enemySR.color)
-        {
-            Destroy(this.gameObject);
         }
     }
 }
