@@ -11,9 +11,6 @@ public class EnemyCollision : MonoBehaviour
             SpriteRenderer bulletSR = collision.gameObject.GetComponent<SpriteRenderer>();
             SpriteRenderer enemySR = gameObject.GetComponent<SpriteRenderer>();
 
-            Debug.Log(bulletSR.color);
-            Debug.Log(enemySR.color);
-
             if(bulletSR.color == enemySR.color)
             {
                 Destroy(collision.gameObject);
