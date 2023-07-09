@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour
 
     public float speed = 10.0f;
     public float flyingTime = 2.5f;
-    public Vector2 dir = Vector2.right;
 
     private void Start()
     {

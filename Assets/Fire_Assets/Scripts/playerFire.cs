@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerFire : MonoBehaviour
+public class PlayerFire : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public GameObject firePosition;
@@ -31,31 +31,31 @@ public class playerFire : MonoBehaviour
 
             if (r && g && b)
             {
-                bulletSR.material.color = Color.white;
+                bulletSR.color = Color.white;
             }
             else if (r && g)
             {
-                bulletSR.material.color = Color.yellow;
+                bulletSR.color = new Color32(255, 255, 0, 255);
             }
             else if (r && b)
             {
-                bulletSR.material.color = Color.magenta;
+                bulletSR.color = Color.magenta;
             }
             else if (g && b)
             {
-                bulletSR.material.color = Color.cyan;
+                bulletSR.color = Color.cyan;
             }
             else if (r)
             {
-                bulletSR.material.color = Color.red;
+                bulletSR.color = Color.red;
             }
             else if (g)
             {
-                bulletSR.material.color = Color.green;
+                bulletSR.color = Color.green;
             }
             else if (b)
             {
-                bulletSR.material.color = Color.blue;
+                bulletSR.color = Color.blue;
             }
 
             isAttackDelaying = true;
