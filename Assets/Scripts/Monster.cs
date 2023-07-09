@@ -4,27 +4,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
-{ //몬스터에서 컬러속성 어케할건지....
-    public float velocity;
+public class enemy : MonoBehaviour
+{
+    public float velocity = 5f;
     public int hp = 1;
-    public int color;
+    Rigidbody2D rigid;
 
-    void Awake()
+    private void Awake()
     {
+        SetRandomColor();
         rigid = GetComponent<Rigidbody2D>();
-        rigid.velocity = new Vector(-1,rigid,velocity.y);
+    }
+    private void Update()
+    {
+        rigid.velocity = new Vector2(-1, rigid, velocity.y);
     }
 
-    void OnHit(int color)
+    private void SetRandomColor()
     {
-        if (color==this.color)
+        enemySR = enemy.GetComponent<SpriteRenderer>();
+        int randomIndex = randomIndex.Range(1, 7);
+        switch (randomIndex)
         {
-            hp -= 1;
-            if (hp <= 0)
-            {
-                Destroy(gameObject);
-            }
+            case 1:
+                enemySR.color = Color.red;
+                break;
+            case 2:
+                enemySR.color = Color.blue;
+                break;
+            case 3:
+                enemySR.color = Color.green;
+                break;
+            case 4:
+                enemySR.color = Color.cyan;
+                break;
+            case 5:
+                enemySR.color = Color.magenta;
+                break;
+            case 6:
+                enemySR.color = Color.white;
+                break;
+            case 7:
+                enemySR.color = new Color32(255, 255, 0, 255);
+                break;
         }
     }
-};
+    private void OnHit()
+    {
+        if (bulletSR.color == enemySR.color)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+}
