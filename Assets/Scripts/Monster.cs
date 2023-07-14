@@ -23,6 +23,15 @@ public class Monster : MonoBehaviour
         rigid.velocity = new Vector2(-1*velocity, rigid.velocity.y);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Monster_Delete")
+        {
+            Destroy(gameObject);
+            Debug.Log("몬스터 제거 실패! 플레이어 생명깎임 추가");
+        }
+    }
+
     private void SetRandomColor()
     {
         
