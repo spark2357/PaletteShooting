@@ -4,12 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy : MonoBehaviour
+public class Monster : MonoBehaviour
 {
-    [SerializedField]
     private float velocity = 5f;
     public SpriteRenderer enemySR;
     Rigidbody2D rigid;
+    
 
     private void Awake()
     {
@@ -26,7 +26,7 @@ public class enemy : MonoBehaviour
     private void SetRandomColor()
     {
         
-        int randomIndex = Random.Range(1, 7);
+        int randomIndex = Random.Range(1, 8);
         switch (randomIndex)
         {
             case 1:
