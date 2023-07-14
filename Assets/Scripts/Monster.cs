@@ -6,24 +6,26 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
-    public float velocity = 5f;
-    public int hp = 1;
+    [SerializedField]
+    private float velocity = 5f;
     public SpriteRenderer enemySR;
     Rigidbody2D rigid;
 
     private void Awake()
     {
-        SetRandomColor();
         rigid = GetComponent<Rigidbody2D>();
+        enemySR = GetComponent<SpriteRenderer>();
+        SetRandomColor();
+        
     }
-    private void Update()
+    private void FixedUpdate()
     {
-        rigid.velocity = new Vector2(-1, rigid, velocity.y);
+        rigid.velocity = new Vector2(-1*velocity, rigid.velocity.y);
     }
 
     private void SetRandomColor()
     {
-        enemySR = enemy.GetComponent<SpriteRenderer>();
+        
         int randomIndex = Random.Range(1, 7);
         switch (randomIndex)
         {
