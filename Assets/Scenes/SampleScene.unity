@@ -336,6 +336,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c22020567b631648b89a729d9d0228b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 262721219518150832, guid: 0ff0be54744864e47a873e9994529d14, type: 3}
+  firePosition: {fileID: 1045267911}
+  bulletSR: {fileID: 0}
+  attackDelay: 0.3
 --- !u!1 &1145746182
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0dd14cc42f34149b5d85be2fb8eb93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnableObject: {fileID: 6955691640746252084, guid: 265017e60b7ed5c4984532f6714a9ec9, type: 3}
+  spawnableObject: {fileID: 791320205353364187, guid: 9bd5d85fe3650a443b0c21dd794f329e, type: 3}
   spawnInterval: 2
 --- !u!212 &1145746184
 SpriteRenderer:
@@ -465,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0dd14cc42f34149b5d85be2fb8eb93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnableObject: {fileID: 6955691640746252084, guid: 265017e60b7ed5c4984532f6714a9ec9, type: 3}
+  spawnableObject: {fileID: 791320205353364187, guid: 9bd5d85fe3650a443b0c21dd794f329e, type: 3}
   spawnInterval: 1
 --- !u!212 &1471451799
 SpriteRenderer:

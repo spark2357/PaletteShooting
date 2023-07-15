@@ -9,7 +9,11 @@ public class Monster : MonoBehaviour
     private float velocity = 5f;
     public SpriteRenderer enemySR;
     Rigidbody2D rigid;
-    
+
+    public float maxHealth = 30.0f;
+    public float health;
+    public MonsterHealthBar healthBar;
+
 
     private void Awake()
     {
@@ -60,5 +64,24 @@ public class Monster : MonoBehaviour
                 enemySR.color = new Color32(255, 255, 0, 255);
                 break;
         }
+    }
+
+    public void getDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            healthBar.setHealth(0);
+            die();
+        }
+        else
+        {
+            healthBar.setHealth(health);
+        }
+    }
+
+    public void die()
+    {
+        Destroy(this.gameObject);
     }
 }
