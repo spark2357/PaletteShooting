@@ -20,7 +20,8 @@ public class Monster : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         enemySR = GetComponent<SpriteRenderer>();
         SetRandomColor();
-        
+        health = maxHealth;
+        healthBar.setMaxHealth(health);
     }
     private void FixedUpdate()
     {
