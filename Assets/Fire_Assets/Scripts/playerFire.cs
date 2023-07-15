@@ -27,6 +27,7 @@ public class PlayerFire : MonoBehaviour
 
             GameObject bullet = Instantiate(bulletPrefab);
             bullet.transform.position = firePosition.transform.position;
+            bullet.GetComponent<Bullet>().damage = 10.0f;
             bulletSR = bullet.GetComponent<SpriteRenderer>();
 
             if (r && g && b)

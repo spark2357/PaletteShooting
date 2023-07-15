@@ -6,16 +6,15 @@ public class EnemyCollision : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet")
         {
             SpriteRenderer bulletSR = collision.gameObject.GetComponent<SpriteRenderer>();
             SpriteRenderer enemySR = gameObject.GetComponent<SpriteRenderer>();
 
-            if(bulletSR.color == enemySR.color)
+            if (bulletSR.color == enemySR.color)
             {
                 Destroy(collision.gameObject);
-                // 대미지 받기
-                Destroy(gameObject);
+                gameObject.GetComponent<Monster>().getDamage(collision.gameObject.GetComponent<Bullet>().damage);
             }
         }
     }

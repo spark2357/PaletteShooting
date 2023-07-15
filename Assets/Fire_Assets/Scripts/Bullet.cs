@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
 
     public float speed = 10.0f;
     public float flyingTime = 2.5f;
+    public float damage;
 
     private void Start()
     {

@@ -140,6 +140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySR: {fileID: 0}
+  maxHealth: 30
+  health: 0
+  healthBar: {fileID: 5368978516998732092}
 --- !u!50 &791320205353364181
 Rigidbody2D:
   serializedVersion: 4
