@@ -336,10 +336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c22020567b631648b89a729d9d0228b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 262721219518150832, guid: 0ff0be54744864e47a873e9994529d14, type: 3}
-  firePosition: {fileID: 1045267911}
-  bulletSR: {fileID: 0}
-  attackDelay: 0.3
 --- !u!1 &1145746182
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +347,7 @@ GameObject:
   - component: {fileID: 1145746185}
   - component: {fileID: 1145746184}
   - component: {fileID: 1145746183}
+  - component: {fileID: 1145746186}
   m_Layer: 0
   m_Name: Spawner2
   m_TagString: Untagged
@@ -371,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnableObject: {fileID: 791320205353364187, guid: 9bd5d85fe3650a443b0c21dd794f329e, type: 3}
-  spawnInterval: 2
+  spawnInterval: 3
 --- !u!212 &1145746184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -439,6 +436,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1145746186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145746182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0dd14cc42f34149b5d85be2fb8eb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnableObject: {fileID: 8953165033509637829, guid: 5dbb8f28c8b38c240a06da3f146ddcab, type: 3}
+  spawnInterval: 16.2
 --- !u!1 &1471451797
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +461,7 @@ GameObject:
   - component: {fileID: 1471451800}
   - component: {fileID: 1471451799}
   - component: {fileID: 1471451798}
+  - component: {fileID: 1471451801}
   m_Layer: 0
   m_Name: Spawner1
   m_TagString: Untagged
@@ -470,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnableObject: {fileID: 791320205353364187, guid: 9bd5d85fe3650a443b0c21dd794f329e, type: 3}
-  spawnInterval: 1
+  spawnInterval: 2
 --- !u!212 &1471451799
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -538,6 +550,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1471451801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471451797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0dd14cc42f34149b5d85be2fb8eb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnableObject: {fileID: 8953165033509637829, guid: 5dbb8f28c8b38c240a06da3f146ddcab, type: 3}
+  spawnInterval: 13.4
 --- !u!1 &1613503456
 GameObject:
   m_ObjectHideFlags: 0

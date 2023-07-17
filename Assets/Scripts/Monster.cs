@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    private float velocity = 5f;
+    public float velocity = 5f;
     public SpriteRenderer enemySR;
     Rigidbody2D rigid;
 
