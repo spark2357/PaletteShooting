@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 1145746184}
   - component: {fileID: 1145746183}
   - component: {fileID: 1145746186}
+  - component: {fileID: 1145746187}
   m_Layer: 0
   m_Name: Spawner2
   m_TagString: Untagged
@@ -450,6 +451,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnableObject: {fileID: 8953165033509637829, guid: 5dbb8f28c8b38c240a06da3f146ddcab, type: 3}
   spawnInterval: 16.2
+--- !u!114 &1145746187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145746182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0dd14cc42f34149b5d85be2fb8eb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnableObject: {fileID: 7291577618548974823, guid: 4ecccdab00a8e8349bd14add24902d5b, type: 3}
+  spawnInterval: 17
 --- !u!1 &1471451797
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +477,7 @@ GameObject:
   - component: {fileID: 1471451799}
   - component: {fileID: 1471451798}
   - component: {fileID: 1471451801}
+  - component: {fileID: 1471451802}
   m_Layer: 0
   m_Name: Spawner1
   m_TagString: Untagged
@@ -564,6 +580,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnableObject: {fileID: 8953165033509637829, guid: 5dbb8f28c8b38c240a06da3f146ddcab, type: 3}
   spawnInterval: 13.4
+--- !u!114 &1471451802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471451797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0dd14cc42f34149b5d85be2fb8eb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnableObject: {fileID: 7291577618548974823, guid: 4ecccdab00a8e8349bd14add24902d5b, type: 3}
+  spawnInterval: 15
 --- !u!1 &1613503456
 GameObject:
   m_ObjectHideFlags: 0

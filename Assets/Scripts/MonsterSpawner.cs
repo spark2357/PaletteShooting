@@ -7,7 +7,7 @@ public class MonsterSpawner : MonoBehaviour
     public GameObject spawnableObject;
     public float spawnInterval = 5f;
 
-    private float timer = 0f;
+    private float timer = 1f;
     void Update()
     {
         if (timer <= 0f)
