@@ -17,5 +17,10 @@ public class EnemyCollision : MonoBehaviour
                 gameObject.GetComponent<Monster>().getDamage(collision.gameObject.GetComponent<Bullet>().damage);
             }
         }
+
+        else if(collision.gameObject.tag == "Bullet_Black")
+        {
+            Destroy(gameObject);
+        }
     }
 }

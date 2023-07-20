@@ -11,6 +11,8 @@ public class PlayerFire : MonoBehaviour
     private bool isAttackDelaying = false;
     public float attackDelay = 0.3f;
 
+    public float bulletDamage = 10.0f;
+
     private void FixedUpdate()
     {
         Attack();
@@ -27,7 +29,7 @@ public class PlayerFire : MonoBehaviour
 
             GameObject bullet = Instantiate(bulletPrefab);
             bullet.transform.position = firePosition.transform.position;
-            bullet.GetComponent<Bullet>().damage = 10.0f;
+            bullet.GetComponent<Bullet>().damage = bulletDamage;
             bulletSR = bullet.GetComponent<SpriteRenderer>();
 
             if (r && g && b)
@@ -64,6 +66,16 @@ public class PlayerFire : MonoBehaviour
         }
     }
 
+    public void skill()
+    {
+        GameObject bullet = Instantiate(bulletPrefab);
+        bullet.transform.position = firePosition.transform.position;
+        bullet.GetComponent<Bullet>().damage = 1000.0f;
+        bulletSR = bullet.GetComponent<SpriteRenderer>();
+        bulletSR.color = Color.black;
+
+        bullet.tag = "Bullet_Black";
+    }
     private void delayTime()
     {
         isAttackDelaying = false;

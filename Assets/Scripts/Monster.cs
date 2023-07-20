@@ -34,7 +34,6 @@ public class Monster : MonoBehaviour
             Destroy(gameObject);
             GameObject player = GameObject.FindWithTag("Player");
             player.GetComponent<PlayerHealth>().getDamage();
-            Debug.Log("몬스터 제거 실패! 플레이어 생명깎임 추가");
         }
     }
 
@@ -85,5 +84,18 @@ public class Monster : MonoBehaviour
     public void die()
     {
         Destroy(this.gameObject);
+
+        // 랜덤 아이템 드롭
+        int healItem = Random.Range(0, 100);
+        if(healItem <= 80)
+        {
+            GameObject.FindWithTag("GameController").GetComponent<Item>().HealItem();
+        }
+
+        int damageItem = Random.Range(0, 100);
+        if (damageItem <= 80)
+        {
+            GameObject.FindWithTag("GameController").GetComponent<Item>().IncreaseDamage();
+        }
     }
 }

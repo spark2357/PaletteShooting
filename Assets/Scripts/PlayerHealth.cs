@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 100f;
     public float health;
     public float damage = 10f;
+    public float healItem = 30.0f;
 
     void Start()
     {
@@ -35,5 +36,15 @@ public class PlayerHealth : MonoBehaviour
         {
             healthBar.setHealth(health);
         }
+    }
+
+    public void heal()
+    {
+        health += healItem;
+        if(health >= maxHealth)
+        {
+            health = maxHealth;
+        }
+        healthBar.setHealth(health);
     }
 }
