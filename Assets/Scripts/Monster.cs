@@ -10,22 +10,21 @@ public class Monster : MonoBehaviour
     public SpriteRenderer enemySR;
     Rigidbody2D rigid;
 
-    public float maxHealth = 30.0f;
+    public float maxHealth;
     public float health;
-    public MonsterHealthBar healthBar;
-
+    public HealthBar healthBar;
 
     private void Awake()
     {
-        rigid = GetComponent<Rigidbody2D>();
-        enemySR = GetComponent<SpriteRenderer>();
+        rigid = gameObject.GetComponent<Rigidbody2D>();
+        enemySR = gameObject.GetComponent<SpriteRenderer>();
         SetRandomColor();
         health = maxHealth;
-        healthBar.setMaxHealth(health);
+        healthBar.setMaxHealth(maxHealth);
     }
     private void FixedUpdate()
     {
-        rigid.velocity = new Vector2(-1*velocity, rigid.velocity.y);
+        rigid.MovePosition(rigid.position + Vector2.left * velocity * Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,6 +32,8 @@ public class Monster : MonoBehaviour
         if(collision.gameObject.tag == "Monster_Delete")
         {
             Destroy(gameObject);
+            GameObject player = GameObject.FindWithTag("Player");
+            player.GetComponent<PlayerHealth>().getDamage();
             Debug.Log("몬스터 제거 실패! 플레이어 생명깎임 추가");
         }
     }
@@ -72,7 +73,7 @@ public class Monster : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            healthBar.setHealth(0);
+            healthBar.setHealth(maxHealth);
             die();
         }
         else
