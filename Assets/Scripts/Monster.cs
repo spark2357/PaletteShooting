@@ -87,7 +87,7 @@ public class Monster : MonoBehaviour
 
         // 랜덤 아이템 드롭
         int healItem = Random.Range(0, 100);
-        if(healItem <= 10)
+        if(healItem <= 15)
         {
             GameObject.FindWithTag("GameController").GetComponent<Item>().HealItem();
         }

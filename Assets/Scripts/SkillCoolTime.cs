@@ -8,7 +8,7 @@ public class SkillCoolTime : MonoBehaviour
     public Image skillFilter;
     public PlayerFire playerfire;
 
-    public float coolTime = 10.0f;
+    public float coolTime = 15.0f;
     private float currentCoolTime; //남은 쿨타임을 추적 할 변수
     private bool canUseSkill = true; //스킬을 사용할 수 있는지 확인하는 변수
 

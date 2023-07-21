@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillFilter: {fileID: 1813054100}
   playerfire: {fileID: 1120845788}
-  coolTime: 10
+  coolTime: 15
 --- !u!114 &159114459
 MonoBehaviour:
   m_ObjectHideFlags: 0
