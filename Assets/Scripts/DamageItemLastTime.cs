@@ -19,6 +19,7 @@ public class DamageItemLastTime : MonoBehaviour
         itemFilter.fillAmount = 0;
         item = itemManager.GetComponent<Item>();
         itemImage.enabled = false;
+        itemFilter.enabled = false;
         running = false;
     }
 
@@ -31,6 +32,7 @@ public class DamageItemLastTime : MonoBehaviour
         }
         itemFilter.fillAmount = 0;
         itemImage.enabled = true;
+        itemFilter.enabled = true;
         StartCoroutine("LastTime");
     }
 
@@ -45,6 +47,7 @@ public class DamageItemLastTime : MonoBehaviour
 
         item.normalizeDamage();
         itemImage.enabled = false;
+        itemFilter.enabled = false;
         running = false;
 
         yield break;
