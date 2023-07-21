@@ -87,19 +87,19 @@ public class Monster : MonoBehaviour
 
         // 랜덤 아이템 드롭
         int healItem = Random.Range(0, 100);
-        if(healItem <= 80)
+        if(healItem <= 10)
         {
             GameObject.FindWithTag("GameController").GetComponent<Item>().HealItem();
         }
 
         int damageItem = Random.Range(0, 100);
-        if (damageItem <= 80)
+        if (damageItem <= 20)
         {
             GameObject.FindWithTag("GameController").GetComponent<Item>().IncreaseDamage();
         }
 
         int turret = Random.Range(0, 100);
-        if(turret <= 80)
+        if(turret <= 5)
         {
             GameObject.FindWithTag("GameController").GetComponent<Item>().turret();
         }
