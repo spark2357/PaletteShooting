@@ -97,5 +97,11 @@ public class Monster : MonoBehaviour
         {
             GameObject.FindWithTag("GameController").GetComponent<Item>().IncreaseDamage();
         }
+
+        int turret = Random.Range(0, 100);
+        if(turret <= 80)
+        {
+            GameObject.FindWithTag("GameController").GetComponent<Item>().turret();
+        }
     }
 }

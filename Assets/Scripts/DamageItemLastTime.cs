@@ -7,7 +7,7 @@ public class DamageItemLastTime : MonoBehaviour
 {
     public Image itemImage;
     public Image itemFilter;
-    public float lastTime = 7.0f;
+    public float lastTime;
 
     public GameObject itemManager;
     private Item item;

@@ -10,6 +10,7 @@ public class Item : MonoBehaviour
 
     public float DamageItemTime = 7.0f;
     public Image damageItemImage;
+    public Image turretImage;
 
     private void Start()
     {
@@ -19,20 +20,22 @@ public class Item : MonoBehaviour
 
     public void HealItem()
     {
-        //Debug.Log("체력 증가");
         playerHealth.heal();
     }
 
     public void IncreaseDamage()
     {
-        Debug.Log("대미지 증가");
         playerFire.bulletDamage = 30.0f;
         damageItemImage.GetComponent<DamageItemLastTime>().startItem();
     }
 
     public void normalizeDamage()
     {
-        Debug.Log("대미지 초기화");
         playerFire.bulletDamage = 10.0f;
+    }
+
+    public void turret()
+    {
+        turretImage.GetComponent<TurretCoolTime>().startTurret();
     }
 }
